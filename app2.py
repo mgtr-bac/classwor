@@ -11,17 +11,15 @@ def index():
 @app.route('/astronaut_selection', methods=['GET', 'POST'])
 def astronaut_selection():
     if request.method == 'POST':
-        # Получение данных из формы
         lastname = request.form.get('lastname')
         firstname = request.form.get('firstname')
         email = request.form.get('email')
         education = request.form.get('education')
-        profession = request.form.getlist('profession')  # может быть несколько профессий
+        profession = request.form.getlist('profession')  
         gender = request.form.get('gender')
         motivation = request.form.get('motivation')
         stay_mars = request.form.get('stay_mars')
 
-        # Здесь можно обрабатывать данные, сохранять в базу или отправлять на email
         print(lastname, firstname, email, education, profession, gender, motivation, stay_mars)
 
         return "Форма отправлена. Спасибо!"

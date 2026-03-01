@@ -30,7 +30,7 @@ def image_mars():
     return render_template("image_mars.html")
 
 
-# ВАЖНЫЙ МАРШРУТ ДЛЯ ЗАДАНИЯ
+
 @app.route("/promotion_image")
 def promotion_image():
     return render_template("promotion_image.html")
